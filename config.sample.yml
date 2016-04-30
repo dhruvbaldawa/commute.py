@@ -1,0 +1,43 @@
+api_key: AABaaaaaaaaaaaaaaaaaaaaaaaa
+
+places:
+    HOME:
+        location: 742, Evergreen Terrace, Springfield
+        alias: Home
+    WORK:
+        location: Springfield Nuclear Power Plant, Springfield
+        alias: Work
+    KWIK_E_MART:
+        location: Kwik-e-Mart, Springfield
+        alias: Apu's
+    MOES_TAVERN:
+        location: Moe's Tavern, Springfield
+        alias: Moe's
+
+map:
+    HOME:
+        KWIK_E_MART:
+            - mode: driving
+        MOES_TAVERN:
+            - mode: driving  # not recommended!
+            - mode: walking
+        WORK:
+            - mode: driving
+            - mode: transit
+              transit_mode: bus
+    KWIK_E_MART:
+        HOME:
+            - mode: driving
+        MOES_TAVERN:
+            - mode: driving
+            - mode: walking
+        WORK:
+            - mode: driving
+    MOES_TAVERN:
+        HOME:
+            - mode: driving # not recommeded again!
+            - mode: walking
+        # You don't go to Kwik-e-mart or to work from Moe's
+    WORK:
+        MOES_TAVERN:
+            - mode: driving
