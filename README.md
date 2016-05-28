@@ -6,6 +6,21 @@ commute.py helps users who travel across multiple modes of transport
 and multiple waypoints to make data-based decisions about which route
 to use and prefer at a given time or at a given time in future.
 
+## Table of contents
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+	- [Get the Google API key](#get-the-google-api-key)
+	- [Create the configuration file](#create-the-configuration-file)
+		- [Sample configuration](#sample-configuration)
+		- [Parts of the configuration file](#parts-of-the-configuration-file)
+			- [`api_key`](#apikey)
+			- [`places`](#places)
+			- [`map`](#map)
+- [Usage](#usage)
+- [Status](#status)
+
+
 ## Installation
 
 You can easily install this script using either `pip` or `easy_install`
