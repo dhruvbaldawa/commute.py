@@ -8,6 +8,7 @@ to use and prefer at a given time or at a given time in future.
 
 ## Table of contents
 
+- [Sample Usage](#sample-usage)
 - [Installation](#installation)
 - [Configuration](#configuration)
 	- [Get the Google API key](#get-the-google-api-key)
@@ -20,6 +21,25 @@ to use and prefer at a given time or at a given time in future.
 - [Usage](#usage)
 - [Status](#status)
 
+## Sample Usage
+
+```shell
+$ commute -c config.yml -s HOME -d WORK
+Total time: 26min.
+Home (time: 26m. w/traffic drive)
+Work
+-----
+Total time: 43min.
+Home (time: 41m. waiting: 02min. bus)
+Work
+-----
+Total time: 45min.
+Home (time: 25m. w/traffic drive)
+Kwik-e-Mart (time: 20m. w/traffic drive)
+Work
+-----
+  ....
+```
 
 ## Installation
 
