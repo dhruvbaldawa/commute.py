@@ -83,7 +83,7 @@ map:
         KWIK_E_MART:
             - mode: driving
         MOES_TAVERN:
-            - mode: driving  # not recommended!
+            - mode: driving
             - mode: walking
         WORK:
             - mode: driving
@@ -99,7 +99,7 @@ map:
             - mode: driving
     MOES_TAVERN:
         HOME:
-            - mode: driving # not recommeded again!
+            - mode: driving  # drinking and driving is not encouraged
             - mode: walking
         # You don't go to Kwik-e-mart or to work from Moe's
     WORK:
@@ -119,7 +119,7 @@ add how to refer to them in the output
 
 Each place has two attributes
     - location: the physical location of the place (the thing you type into Google Maps).
-    - alias: an alias to refer by and to use while printing the output. 
+    - alias: an alias to refer by and to use while printing the output.
 
 
 ##### `map`
@@ -155,9 +155,15 @@ The routing information supports all the arguments that the Google Maps python c
 ## Usage
 
 ```shell
-$ commute -c config.yml -s HOME -d WORK -t now
+$ commute -c config.yml -s HOME -d WORK
+$ commute -c config.yml -s HOME -d WORK -w now
+$ commute -c config.yml -s HOME -d WORK -w 'in an hour'
+$ commute -c config.yml -s HOME -d WORK -w 'friday evening @ 7'
 ```
+
+The date/time parsing is done with the help of  [parsedatetime](https://github.com/bear/parsedatetime) library, so look at the
+ documentation to find more about the formats supported.
 
 ## Status
 
-This project is at a very early stage right now.
+This project is at a very early stage right now. Please try it out and report any issues.

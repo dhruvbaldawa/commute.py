@@ -12,9 +12,9 @@ def readme():
         return f.read()
 
 setup(name='commute',
-      version='0.1',
+      version='0.2',
       description=DESCRIPTION,
-      long_description=readme(),
+#       long_description=readme(),
       url='https://github.com/dhruvbaldawa/commute.py',
       author='Dhruv Baldawa',
       author_email='dhruvbaldawa@gmail.com',
@@ -25,6 +25,7 @@ setup(name='commute',
           'googlemaps',
           'networkx',
           'pyyaml',
+          'parsedatetime',
       ],
       entry_points={
           'console_scripts': ['commute=commute.cli:cli'],

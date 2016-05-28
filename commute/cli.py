@@ -24,10 +24,13 @@ SOFTWARE.
 """
 import commute
 import click
+import time
+from parsedatetime import Calendar
 
 
 @click.command()
-@click.option('--config', '-c', type=click.File(), required=True,
+@click.option('--config', '-c', type=click.Path(exists=True, dir_okay=False),
+              required=True,
               help="path to the configuration yaml file (config.yml).")
 @click.option('--src', '-s', required=True,
               help="name of the source place as used in the "
@@ -40,8 +43,10 @@ import click
               ", defaults to the current time")
 def cli(config, src, dst, when):
     """
-    CLI docsting
+    commute.py helper CLI to compute possible commute options.
     """
+    if when is not None:
+        when = int(time.mktime(Calendar().parseDT(when)[0].timetuple()))
     for rank, path in commute.get_all_paths(config, src, dst, when):
         click.echo(commute.format_path(rank, path))
         click.echo("-" * 5)

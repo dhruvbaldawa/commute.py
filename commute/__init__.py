@@ -118,7 +118,7 @@ def format_path(rank, path):
     for segment in path:
         s = "{}".format(get_alias(segment['source']))
         s += " (time: {:02d}m.".format(seconds_to_minutes(
-                                         segment['duration']))
+            segment['duration']))
 
         if 'traffic' in segment:
             s += " w/traffic"
