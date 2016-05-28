@@ -15,9 +15,9 @@ to use and prefer at a given time or at a given time in future.
 	- [Create the configuration file](#create-the-configuration-file)
 		- [Sample configuration](#sample-configuration)
 		- [Parts of the configuration file](#parts-of-the-configuration-file)
-			- [`api_key`](#apikey)
-			- [`places`](#places)
-			- [`map`](#map)
+			- [api_key](#apikey)
+			- [places](#places)
+			- [map](#map)
 - [Usage](#usage)
 - [Status](#status)
 
@@ -144,10 +144,10 @@ map:
 
 #### Parts of the configuration file
 
-##### `api_key`
+##### api_key
 `api_key` will hold the information about the Google Developer's API key.
 
-##### `places`
+##### places
 `places` holds information about all the places to be taken under
 consideration, and a small description about their physical address
 add how to refer to them in the output
@@ -157,7 +157,7 @@ Each place has two attributes
     - alias: an alias to refer by and to use while printing the output.
 
 
-##### `map`
+##### map
 `map` key contains all the connections between the places, possible
 ways to travel between the places and multiple ways, if any
 It can also contain other detailed information about the specific way of travel.
