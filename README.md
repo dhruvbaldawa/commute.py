@@ -211,7 +211,7 @@ dst = "WORK"
 when = time.time()
 
 for rank, path in get_all_paths(config, src, dst, when):
-    print(commute.format_path(rank, path))
+    print(format_path(rank, path))
     print("-" * 5)
 ```
 
