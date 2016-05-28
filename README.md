@@ -199,6 +199,22 @@ $ commute -c config.yml -s HOME -d WORK -w 'friday evening @ 7'
 The date/time parsing is done with the help of  [parsedatetime](https://github.com/bear/parsedatetime) library, so look at the
  documentation to find more about the formats supported.
 
+For using it as a library,
+
+```python
+import time
+from commute import get_all_paths, format_path
+
+config_file = "/path/to/config/file"
+src = "HOME"
+dst = "WORK"
+when = time.time()
+
+for rank, path in get_all_paths(config, src, dst, when):
+    print(commute.format_path(rank, path))
+    print("-" * 5)
+```
+
 ## Status
 
 This project is at a very early stage right now. Please try it out and report any issues.

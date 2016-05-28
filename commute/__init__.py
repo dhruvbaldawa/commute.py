@@ -150,6 +150,15 @@ def path_rank(path):
 
 
 def get_all_paths(config_file, src, dst, when=None):
+    """
+    Utility function to compute the paths between a source and destination
+    given a config file and time.
+
+    config_file: path to the config file
+    src: source
+    dst: destination
+    when: start of commute unix timestamp
+    """
     with open(config_file) as f:
         global config
         config = yaml.load(f.read())
